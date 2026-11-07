@@ -36,5 +36,7 @@
 
 - Refer to every figure and table in the text, in the order they appear.
 - Every caption is understandable without the main text: it defines its abbreviations and states the units.
+- Legends and annotations must not obscure data; place them in dedicated space outside the plotting area when practical.
+- Check figures at their final typeset size: all labels must fit inside their intended regions and remain legible.
 - Give every number with its unit, and use the same number of decimal places for the same kind of quantity.
 - Report uncertainty (standard deviation or confidence interval) with every estimate.
