@@ -1,5 +1,7 @@
 # Paper writing guidelines
 
+See the [language guide](scientific_writing_guidelines_for_llms.md) for detailed scientific-writing instructions.
+
 ## Abbreviations
 
 - Spell out every abbreviation in full at its first occurrence, followed by the abbreviation in parentheses, e.g., "electrocardiogram (ECG)". Use only the abbreviation after that.
@@ -40,3 +42,5 @@
 - Check figures at their final typeset size: all labels must fit inside their intended regions and remain legible.
 - Give every number with its unit, and use the same number of decimal places for the same kind of quantity.
 - Report uncertainty (standard deviation or confidence interval) with every estimate.
+
+
