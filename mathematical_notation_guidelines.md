@@ -2,6 +2,10 @@
 
 Apply these instructions when drafting, revising, or reviewing any mathematical content in a manuscript. Cover the entire article, including the abstract, inline mathematics, displayed equations, algorithms, figures, tables, captions, appendices, and supplementary material.
 
+This guide is part of the [publication guidelines](README.md). For general style and paper structure, see [writing_guidelines.md](writing_guidelines.md).
+
+**In short:** introduce each equation with a sentence that says what it computes. Follow it with a `where …` clause that defines every new symbol, its domain and its units. Number every displayed equation. Use one symbol per concept everywhere. Check equations against the code. Keep only the equations that do identifiable work in the paper.
+
 ## 1. Design notation before editing equations
 
 1. Inventory the equations and identify the quantities, mathematical objects, indices, operators, and assumptions they require. Read the whole manuscript before choosing notation for an individual section.
@@ -14,6 +18,13 @@ Apply these instructions when drafting, revising, or reviewing any mathematical 
 Keep the register as a working review artifact; a published notation table is optional and does not replace definitions in the text. Do not add unused symbols merely to complete a notation system.
 
 ## 2. Define every symbol at its first use
+
+- Introduce each displayed equation with a sentence that says **what it computes or asserts**. Put the definitions in a `where …` clause directly after the equation.
+- State **domains and dimensions** explicitly, e.g. \(e(k) \in \mathbb{R}\), \(\mathbf{w}(k) \in \mathbb{R}^{n}\), \(k \in \mathbb{Z}\).
+
+| Do | Avoid |
+|---|---|
+| The prediction error is \(e(k) = d(k) - \hat{y}(k)\), where \(d(k) \in \mathbb{R}\) is the target and \(\hat{y}(k) \in \mathbb{R}\) is the filter output at discrete time index \(k\). | The error is computed as usual. |
 
 - Introduce each manuscript-specific symbol before its first occurrence or in prose immediately following the first equation in which it occurs. A reader must be able to understand that first equation without searching later sections or a notation table. If a symbol appears earlier in inline mathematics, define it there.
 - Explain every newly introduced element of that equation: quantities, parameters, constants, sets, functions, random variables, indices, index ranges, subscripts, superscripts, and nonstandard operators. Give the meaning, type or domain, and units where applicable. Explain what indices and qualifiers represent; a variable name alone is not a definition.
@@ -37,6 +48,9 @@ must explain that \(n \geq 1\) is the number of observations, \(i \in \{1,\ldots
 - Keep equations mathematically compatible: domains, dimensions, units, index bounds, conditioning, and assumptions must agree. State any conversion, normalization, approximation, or change of variables explicitly.
 - Preserve the mathematical meaning when renaming symbols. Apply changes to all occurrences and their definitions; check for collisions with symbols already present. Do not perform an unchecked global text replacement.
 - Explain what each important equation computes or asserts and how it contributes to the argument. State whether a relation is a definition, an identity, an assumption, an approximation, or an empirical model when this is not evident.
+- Number all displayed equations and refer to them by number. Do not write "the formula above" or "the following equation".
+- Derive or state an equation once. Later sections refer back to it by number instead of repeating it, unless repetition is genuinely needed for readability.
+- When the paper describes implemented code (an update rule, a loss, a metric), **check every displayed formula against the implementation**. In software papers, render the equation and the printed code snippet from the same source. Typesetting errors such as a missing factor or a wrong variable in an update rule easily survive review.
 
 ### Require a functional role for every equation
 
@@ -58,6 +72,8 @@ For example, retaining a service-duration vector requires explaining how each co
 Audit the rendered manuscript in reading order, using the notation register as the reference. Source searches can help locate occurrences but do not replace checking rendered equations and figure labels.
 
 - [ ] Every symbol is defined at its first use; every first equation explains all newly introduced notation locally.
+- [ ] Every displayed equation is introduced by a sentence that says what it computes, is numbered, and is referenced by number.
+- [ ] Equations that describe implemented code match the implementation, and printed code snippets run as shown.
 - [ ] Every displayed equation has a recorded purpose and a specific, explained use in a derivation, procedure, evaluation, reported result, or interpretation; no equation passes solely because its notation is correct.
 - [ ] Definitions and input vectors connect to the method that consumes them; terminal metrics connect to the actual reported evaluation or result.
 - [ ] The relevant path from model inputs through computation or simulation to evaluated outputs is reconstructable, including the differences among compared variants.
