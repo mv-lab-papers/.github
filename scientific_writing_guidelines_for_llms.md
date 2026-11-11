@@ -12,6 +12,12 @@ Write as a knowledgeable researcher explaining a study to other researchers, inc
 
 **Avoid:** compressed claims, noun-heavy phrases, fashionable jargon, excessive qualifications, and sentences that sound like abstracts of abstracts.
 
+### Consistent authorial voice
+
+Use the first-person plural consistently for the authors throughout the manuscript: **we, us, our, ours, ourselves**, with plural verb agreement (e.g., "we propose," "we were"). Do not alternate with the first-person singular (**I, me, my, mine, myself**) when describing the authors' aims, methods, decisions, results, or interpretations. Apply this rule across the abstract, main text, captions, appendices, and supplementary material, including text assembled from multiple drafts or contributors.
+
+When revising, check pronouns and verb agreement in context; do not perform a blind word replacement. Preserve first-person singular inside verbatim quotations, participant statements, or other explicitly attributed material, since it refers to the quoted speaker rather than the authors. Sentences with other subjects (e.g., "the model predicts") remain appropriate; the requirement is to keep references to the authors consistently plural.
+
 A useful test: **Would a competent researcher outside this narrow specialty understand the sentence without having to decode its grammar?** If not, rewrite it. Keep necessary technical terms, but explain their role.
 
 ## 2. Sentence-level rules
@@ -43,6 +49,14 @@ A typical paragraph should:
 - State the implication or connect logically to the next paragraph when useful.
 
 Avoid paragraphs that jump among unrelated claims. Avoid strings of very short declarative sentences with no explanation, and avoid paragraphs made of one huge sentence. Do not force every paragraph into a rigid template.
+
+### Keep Related Work focused on the literature
+
+Related Work should synthesize prior research: explain what existing studies investigated, compare their approaches and findings, and identify limitations or open questions supported by the cited literature. Organize it around the research landscape so readers can understand how the field developed.
+
+Do not let the present study's aims or methodology leak into this section. State the paper's objectives and contributions in the Introduction, and explain its proposed method, experimental design, datasets, parameter choices, and evaluation procedure in Methods or the corresponding dedicated sections. Describing a cited study's methodology is appropriate when it helps explain or compare prior work; clearly attribute it to that study.
+
+A brief closing transition may connect an established gap to the paper's topic. Keep it at the level of the gap; do not turn it into a list of objectives, a preview of the proposed solution, or a justification of experimental choices. Avoid shaping claims about the literature merely to make the chosen method appear necessary. When revising, move misplaced material to its appropriate section and preserve the citations and context needed for the remaining literature discussion.
 
 ## 4. Precision without unreadable overqualification
 
@@ -175,8 +189,9 @@ Do not oversimplify established scientific concepts. Use terms such as “cross-
 - Attach citations to the precise claims they support.
 - Do not invent references, author names, results, or citation numbers.
 - Do not treat a citation as a replacement for explaining the method.
-- Define symbols at first use and maintain consistent notation.
-- Explain the purpose and interpretation of important equations in prose.
+- Follow the [mathematical notation guide](mathematical_notation_guidelines.md): inventory equations and design a manuscript-wide notation register before editing, define every symbol at first use (including all new notation in its first equation), and validate the complete article for consistency and mathematical compatibility.
+- For every displayed equation, explain its purpose and its concrete use in the subsequent reasoning, computation, evaluation, or interpretation of a reported result. Either integrate it into that explanation or replace it with prose or a table and remove unnecessary notation. A definition, repeated symbol, or bare equation reference alone does not establish useful mathematical development.
+- When describing a model or simulation, connect measured inputs to sampling rules, computation or state transitions, outputs, and evaluation. Explain the operational differences among compared variants. Do not present isolated definitions as a complete mathematical description of the method; follow the [functional-role requirements](mathematical_notation_guidelines.md#require-a-functional-role-for-every-equation).
 - Do not restate every equation in words if it adds no value.
 - Preserve all numerical values, units, conditions, uncertainty estimates, and cited support during editing.
 - If information is missing, flag it for the author instead of filling it with plausible-sounding facts.
@@ -205,8 +220,12 @@ Before returning a manuscript section, verify:
 - [ ] Specialist terms are used accurately and explained where necessary.
 - [ ] The scope and limitations are clear but not needlessly defensive.
 - [ ] Methods are described by what they do, not only by their names.
+- [ ] Related Work synthesizes prior research and supported gaps; the present study's aims, contributions, and methodology appear in their appropriate sections rather than leaking into the literature review.
 - [ ] Claims follow from the actual evidence and quantitative results.
 - [ ] No facts, metrics, assumptions, or citations were invented.
+- [ ] The authorial voice consistently uses first-person plural (we/us/our) with matching verb agreement; no unexplained switches to first-person singular remain.
+- [ ] Mathematical notation passes the [notation audit](mathematical_notation_guidelines.md#4-validate-after-drafting-and-after-every-mathematical-revision), including first-use definitions and consistency across the entire article.
+- [ ] Every displayed equation has a concrete role beyond introducing notation; model inputs, computational steps, and evaluated outputs are explicitly connected, and unnecessary formalism has been removed.
 - [ ] The text sounds like a careful human researcher, not a language model imitating academic writing.
 
 ## 14. Ready-to-use instruction for an AI writing assistant
